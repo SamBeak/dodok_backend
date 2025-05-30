@@ -10,6 +10,7 @@ import { AuthModule } from './auth/auth.module';
 import { CommonModule } from './common/common.module';
 import { PassengersModule } from './passengers/passengers.module';
 import { PaymentsModule } from './payments/payments.module';
+import { TicketsModule } from './tickets/tickets.module';
 
 @Module({
   imports: [
@@ -40,6 +41,7 @@ import { PaymentsModule } from './payments/payments.module';
     CommonModule,
     PassengersModule,
     PaymentsModule,
+    TicketsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
