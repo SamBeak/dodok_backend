@@ -12,6 +12,7 @@ import { PassengersModule } from './passengers/passengers.module';
 import { PaymentsModule } from './payments/payments.module';
 import { TicketsModule } from './tickets/tickets.module';
 import { AuditLogsModule } from './audit_logs/audit_logs.module';
+import { UsersModel } from './users/entities/users.entity';
 
 @Module({
   imports: [
@@ -24,14 +25,15 @@ import { AuditLogsModule } from './audit_logs/audit_logs.module';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        host: configService.get('DB_HOST'),
-        port: configService.get('DB_PORT'),
+        host: configService.get('POSTGRES_HOST'),
+        port: configService.get('POSTGRES_PORT'),
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DB'),
         synchronize: true,
         entities: [
           // __dirname + '/**/*.entity.{js,ts}',
+          UsersModel,
         ]
       }),
     }),
