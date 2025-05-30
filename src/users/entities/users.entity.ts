@@ -9,6 +9,7 @@ export class UsersModel extends BaseModel {
     
     @Index(
         "idx_users_email", 
+        ['email'],
         {
             unique: true,
         }
@@ -17,6 +18,7 @@ export class UsersModel extends BaseModel {
         type: 'varchar',
         length: 255,
         nullable: false,
+        unique: true,
     })
     @ApiProperty({
         example: 'dodok@gmail.com',
