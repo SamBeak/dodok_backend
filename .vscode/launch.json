@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "프로그램 디버거 실행",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["run", "start:dev"],
+            "console": "integratedTerminal",
+            "restart": true,
+            "port": 9299,
+            "autoAttachChildProcesses": true,
+        }
+    ]
+}
